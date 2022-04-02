@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-#define SENTRY 9999 //设置哨兵，哨兵的要求为比任何数组的数都大。
+#define SENTRY 0x3f3f3f //设置哨兵，哨兵的要求为比任何数组的数都大。
 #define SIZE 10 //设置数组长度
 
 void Merge( int*, int, int ,int );//声明两数组按大小合并的函数。
