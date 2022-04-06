@@ -1,11 +1,15 @@
-//堆排序
+
 
 #include<stdio.h>
 #include<stdlib.h>
 
-#define LEFTDATANUMBER (2*i+1)//左孩子对应数组下标
-#define RIGHTDATANUMBER (2*i+2)//右孩子对应数组下标。
+//左孩子对应数组下标
+#define LEFTDATANUMBER (2*i+1)
 
+//右孩子对应数组下标。
+#define RIGHTDATANUMBER (2*i+2)
+
+//数组长度
 #define SIZE 10
 
 
@@ -75,7 +79,7 @@ void MaxHeapify(int* array,int start,int n)
         array[i]=array[largest];
         array[largest]=temp;
 
-        MaxHeapify(array,largest,n);        //交换后，被交换的元素之后的节点可能不会维持最大堆性质，所以要对被交换位置进行最大堆维持。
+        MaxHeapify(array,largest,n);//交换后，被交换的元素之后的节点可能不会维持最大堆性质，所以要对被交换位置进行最大堆维持。
     }
 
     
@@ -90,7 +94,6 @@ void BuildMaxHeap(int*array,int length)//构建一个最大堆。
         MaxHeapify(array,i,length);
     }    
 }
-
 
 void HeapSort(int*array, int n)
 {
