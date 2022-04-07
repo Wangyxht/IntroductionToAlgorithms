@@ -17,7 +17,7 @@
 void MaxHeapify(int*,int,int);
 //构建最大堆的数组并维护
 void BuildMaxHeap(int*,int);
-//堆排序
+//堆排序函数
 void HeapSort(int* ,int);
 
 int main (void)
