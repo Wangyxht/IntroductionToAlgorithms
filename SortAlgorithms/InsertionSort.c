@@ -2,6 +2,8 @@
 #include<stdlib.h>
 #define SIZE 10
 
+
+//插入排序
 int* InsertionSort(int*,int);
 
 int main(void)
