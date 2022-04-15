@@ -1,11 +1,18 @@
+//归并排序
+
+
 #include <stdio.h>
 #include <stdlib.h>
 
 #define SENTRY 0x3f3f3f //设置哨兵，哨兵的要求为比任何数组的数都大。
 #define SIZE 10 //设置数组长度
 
-void Merge( int*, int, int ,int );//声明两数组按大小合并的函数。
-void MergeSort(int* ,int, int);//声明归并排序函数。
+
+//两数组按大小合并的函数。
+void Merge( int*, int, int ,int );
+
+//归并排序函数
+void MergeSort(int* ,int, int);
 
 int main(void)
 {
@@ -85,7 +92,7 @@ void MergeSort(int *array ,int arrayStart ,int arrayEnd)//建立归并排序函�
     
     if(arrayStart<arrayEnd)
     {
-        middle=(arrayStart+arrayEnd)/2;//求数组中值
+        middle=(arrayStart+arrayEnd)/2;//求数组下标中值
 
         MergeSort(array,arrayStart,middle);//排序左半数组（递归调用）
         MergeSort(array,middle+1,arrayEnd);//排序右半数组（递归调用）
