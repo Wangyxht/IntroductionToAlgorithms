@@ -50,9 +50,12 @@ int* ShellSort(int* array,int arraySize)
         for(i=0; i<arraySize/gap ; i++)
         {
             temp=array[i];
-            for(j=i-gap; array[j]>temp && j>=0; j-=gap)
+            for(j=i-gap; j>=0; j-=gap)
             {
-                array[j+gap]=array[j];
+                if(array[j]>temp)
+                    array[j+gap]=array[j];
+                else
+                    break;
             }
             array[j+gap]=temp;
         }
